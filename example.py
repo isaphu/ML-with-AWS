@@ -8,3 +8,6 @@ print(shirt_second_branch.color)
 
 shirt_second_branch.change_price(15)
 print(shirt_second_branch.price)
+
+shirt_first_branch.color = 'navy'
+print(shirt_first_branch.color)

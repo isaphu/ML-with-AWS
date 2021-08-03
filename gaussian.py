@@ -50,4 +50,31 @@ class Gaussian():
         self.stdev = self.calculate_stdev(sample)
 
     def plot_histogram(self):
+        plt.hist(self.data)
+        plt.title('Histogram of Data')
+        plt.xlabel('data')
+        plt.ylabel('count')
+
+    def pdf(self,x):
+        return (1.0/(self.stdev * math.sqrt(2*math.pi))) * math.exp(-0.5*((X - self.mean) / self.stdev) ** 2)
+
+    def plot_histogram_pdf(self, n_spaces = 50):
+
+
+        mu = self.mean 
+        sigma = self.stdev
+
+        min_range = min(self.data)
+        max_range = max(self.data)
+
+        interval = 1.0 * (max_range - min_range) / n_spaces
+        x = []
+        y = []
+
+        for i in range(n_spaces):
+            tmp = min_range + interval * i
+            x.append(tmp)
+            y.append(self.pdf(tmp))
         
+        
+

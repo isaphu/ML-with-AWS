@@ -101,5 +101,5 @@ class Gaussian():
     def __repr__(self):
 
         return "mean {}, standard deviation {}".format(self.mean, self.stdev)
-        
+
 
